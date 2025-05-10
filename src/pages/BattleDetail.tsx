@@ -9,12 +9,28 @@ import ScoreDisplay from '@/components/ScoreDisplay';
 import Leaderboard from '@/components/Leaderboard';
 import { Clock, Users, Star, ChevronLeft } from 'lucide-react';
 
-const battles = {
+// Define type for difficulty to ensure type safety
+type DifficultyLevel = 'beginner' | 'intermediate' | 'advanced';
+
+// Define a proper interface for battle data
+interface Battle {
+  id: string;
+  title: string;
+  description: string;
+  difficulty: DifficultyLevel;
+  timeLimit: number;
+  participants: number;
+  isActive: boolean;
+  criteria: string;
+  example: string;
+}
+
+const battles: Record<string, Battle> = {
   '1': {
     id: '1',
     title: 'Time Travel Paradox',
     description: 'In this battle, you need to craft a prompt that creates a coherent story involving a time traveler who must solve a paradox of their own creation. Your prompt should specify how the AI should structure the narrative, what temporal mechanics to consider, and how to create a satisfying resolution that doesn\'t create plot holes.',
-    difficulty: 'intermediate' as const,
+    difficulty: 'intermediate',
     timeLimit: 15,
     participants: 248,
     isActive: true,
