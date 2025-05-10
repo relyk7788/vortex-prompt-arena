@@ -76,8 +76,8 @@ const BattleDetail = () => {
               <span>{battle.participants} participants</span>
             </div>
             <span className={`px-2 py-1 rounded-full text-xs capitalize ${
-              battle.difficulty === 'beginner' ? 'bg-green-500/20 text-green-500' :
-              battle.difficulty === 'intermediate' ? 'bg-yellow-500/20 text-yellow-500' :
+              battle.difficulty === 'beginner' ? 'bg-green-500/20 text-green-500' : 
+              battle.difficulty === 'intermediate' ? 'bg-yellow-500/20 text-yellow-500' : 
               'bg-red-500/20 text-red-500'
             }`}>
               {battle.difficulty}

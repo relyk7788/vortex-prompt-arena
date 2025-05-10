@@ -64,7 +64,6 @@ const ScoreDisplay = ({ criteria, totalScore, maxTotalScore }: ScoreDisplayProps
               <Progress 
                 value={(criterion.score / criterion.maxScore) * 100} 
                 className="h-2 bg-battle-dark"
-                indicatorClassName="bg-battle-primary"
               />
             </div>
           ))}
